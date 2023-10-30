@@ -1,0 +1,79 @@
+<div class="card-container">
+  <div class="card">
+    <div>
+      <h1>Tela do Vendedor</h1>
+      <h2>Cadastrar Produto</h2>
+        <div class="form-group">
+          <form (submit)="addProduct()" class="seller-form">
+            <div>
+              <label for="name">Nome do Produto</label>
+              <input type="text" id="name" name="name" (ngModel)="name">
+            </div>
+            <div>
+              <label for="price">Valor do Produto</label><br>
+              <input type="number" id="price" name="price" (ngModel)="price">
+            </div>
+            <div>
+              <label for="quantity">Quantidade do Produto</label>
+              <input type="number" id="quantity" name="quantity" (ngModel)="price">
+            </div>
+            <div class="btn-form">
+              <div class="btn-seller">
+                <button id="btn-product" type="submit" value="Cadastrar">Cadastrar Produto</button><br>
+                <button id="btn-show" type="submit" (click)="toggleProductList()">Exibir Tabela</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <app-btn-login></app-btn-login>
+    </div>
+  </div>
+</div>
+
+  <!-- <div *ngIf="showProductList">
+    <h2>Tabela de Produtos Cadastrados</h2>
+    <ul *ngIf="products.length > 0">
+      <li *ngFor="let product of products">
+        {{ product.name }} - {{ product.price }} - {{ product.quantity }}
+      </li>
+    </ul>
+    <p *ngIf="products.length === 0">Nenhum produto disponível.</p>
+  </div>
+  <div>
+    <app-btn-login></app-btn-login>
+  </div>
+</div> -->
+
+<!-- <div>
+  <h1>Tela do Vendedor</h1>
+  <h2>Cadastrar Produto</h2>
+  <form (submit)="addProduct()">
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" (change)="updateField('name', $event)" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Preço:</label>
+      <input type="number" id="price" name="price" (change)="updateField('price', $event)" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantidade:</label>
+      <input type="number" id="quantity" name="quantity" (change)="updateField('quantity', $event)" required>
+    </div>
+    <button type="submit">Cadastrar Produto</button>
+  </form>
+  <button (click)="toggleProductList()">Exibir Tabela de Produtos</button>
+  <div *ngIf="showProductList">
+    <h2>Tabela de Produtos Cadastrados</h2>
+    <ul *ngIf="products.length > 0">
+      <li *ngFor="let product of products">
+        {{ product.name }} - {{ product.price }} - {{ product.quantity }}
+      </li>
+    </ul>
+    <p *ngIf="products.length === 0">Nenhum produto disponível.</p>
+  </div>
+  <div>
+    <app-btn-login></app-btn-login>
+  </div>
+</div> -->
+

@@ -1,0 +1,26 @@
+<div class="card-container">
+  <div class="card">
+    <div>
+      <h1>Tela do Usuário</h1>
+      <h2>Produtos Disponíveis</h2>
+      <ul *ngIf="products.length > 0">
+        <li *ngFor="let product of products">
+          {{ product.name }} - {{ product.price }} - {{ product.quantity }}
+          <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+        </li>
+      </ul>
+      <p *ngIf="products.length === 0">Nenhum produto cadastrado.</p>
+      <div *ngIf="cart.length > 0">
+        <h2>Carrinho de Compras</h2>
+        <ul>
+          <li *ngFor="let item of cart">
+            {{ item.product.name }} - Quantidade: {{ item.quantity }}
+            <button (click)="removeFromCart(item)">Remover do Carrinho</button>
+          </li>
+        </ul>
+        <button (click)="checkout()">Finalizar Compra</button>
+      </div>
+      <app-btn-login></app-btn-login>
+    </div>
+  </div>
+</div>

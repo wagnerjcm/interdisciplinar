@@ -1,0 +1,192 @@
+
+
+/* ---------- COMPONENTS ---------- */
+
+* {
+  box-sizing: border-box;
+}
+body, html, * {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url('/assets/images/background_white.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- CARD CONTAINER ---------- */
+
+.card-container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #39673b;
+  opacity: 0.92;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #FFF;
+}
+.card h1, .card h2, .card h3 {
+  color: #333;
+}
+.card h1 {
+  text-align: center;
+}
+
+/* ---------- TITLE LOGIN ---------- */
+
+#title-login {
+  color: #fff; /* Cor do texto (branco) */
+  font-weight: bold; /* Texto em negrito */
+  font-family: "Arial", sans-serif; /* Escolha a fonte desejada */
+  font-size: 24px; /* Tamanho da fonte (ajuste conforme necessário) */
+}
+
+/* ---------- LOGIN FORM ---------- */
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+}
+.login-form label {
+  width: 60px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.login-form input {
+  width: calc(100% - 120px);
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#login-title {
+  color: white;
+  align-items: center;
+}
+
+/* ---------- BOTÃO RADIO ---------- */
+
+.radio-group {
+  margin-top: 10px;
+  margin-left: 20%;
+}
+.radio-group label {
+  margin-right: 30px;
+}
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* ---------- BOTÃO SUBMIT ---------- */
+
+.btn-submit {
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+button[type="submit"] {
+  background-color: #afd1b0d4; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto no botão */
+  padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+  border: none; /* Remova a borda do botão */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Mude o cursor para uma mão ao passar o mouse */
+  font-weight: bold;
+  font-size: large;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+button[type="submit"]:active {
+  background-color: #003c80; /* Cor de fundo do botão quando pressionado */
+}
+
+/* ---------- BOTÃO APPS ---------- */
+
+.btn-form {
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+button[type="submit"] {
+  background-color: #afd1b0d4; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto no botão */
+  padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+  border: none; /* Remova a borda do botão */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Mude o cursor para uma mão ao passar o mouse */
+  font-weight: 400;
+  font-size: small;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+button[type="submit"]:active {
+  background-color: #003c80; /* Cor de fundo do botão quando pressionado */
+}
+
+/* ---------- TABELA APPS ---------- */
+
+.tabela {
+  max-width: 600px; /* Largura máxima da tabela */
+  max-height: 600px; /* Altura máxima da tabela */
+  width: 100%; /* Garante que a tabela ocupe a largura máxima disponível */
+}
+
+/* ---------- TABELA SELLER ---------- */
+
+.seller-form {
+  width: 400px;
+  margin: 0 auto;
+}
+.seller-form input {
+  width: calc(100% - 120px);
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#seller-title {
+  color: white;
+  align-items: center;
+}
+.btn-seller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#btn-product,
+#btn-show {
+  background-color: #afd1b0d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 12px;
+  width: 45%; /* Define a largura igual para ambos os botões */
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+#btn-product:hover,
+#btn-show:hover {
+  background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+}
+
+#btn-product:active,
+#btn-show:active {
+  background-color: #003c80; /* Altera a cor de fundo quando pressionado */
+}
