@@ -12,27 +12,33 @@ export class TelaSellerComponent {
   price: number = 0;
   quantity: number = 0;
 
-  product: Product = new Product();
   showProductList = false;
   products: Product[] = [];
 
   constructor(
     private productService: ProductService,
     private router: Router
-  ) {
-  }
+  ) {}
 
   addProduct() {
-    const product = {
-      name : this.name,
-      price : this.price,
-      quantity: this.quantity
+    if (this.name.trim() === '' || this.price <= 0 || this.quantity <= 0) {
+      alert('Por favor, preencha todos os campos corretamente.');
+      return;
     }
-      this.productService.addProduct(product);
-      this.name = '';
-      this.price = 0;
-      this.quantity = 0;
-    alert('Produo cadastrado com sucesso!');
+
+    const product: Product = {
+      name: this.name,
+      price: this.price,
+      quantity: this.quantity
+    };
+
+    this.productService.addProduct(product);
+    this.updateProductList();
+    this.name = '';
+    this.price = 0;
+    this.quantity = 0;
+
+    alert('Produto cadastrado com sucesso!');
   }
 
   toggleProductList() {
@@ -40,6 +46,6 @@ export class TelaSellerComponent {
   }
 
   updateProductList() {
-    this.products = this.productService.getProducts(); // Carrega os produtos
+    this.products = this.productService.getProducts();
   }
 }

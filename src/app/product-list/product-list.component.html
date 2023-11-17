@@ -18,22 +18,10 @@
             <input type="checkbox" value="Delete" (change)="deleteProduct(i)">
           </td>
         </tr>
-      </tbody>
-      <button class="btn-pop" type="button" (click)="popTable()">Remover Item</button>
-      <app-btn-login></app-btn-login>
+      </tbody><br>
     </table>
+    <div>
+      <app-btn-login></app-btn-login>
+    </div>
   </div>
 </div>
-
-
-
-
-<!-- <ul *ngIf="products.length > 0">
-  <li *ngFor="let product of products">
-    {{ product.name }} - {{ product.price }} - {{ product.quantity }}
-    <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
-  </li>
-</ul>
-<p *ngIf="products.length === 0">Nenhum produto disponível.</p>
-<app-btn-login></app-btn-login>
- -->

@@ -10,40 +10,35 @@ export class ProductService {
   private products: Product[] = [];
   private productsSubject = new BehaviorSubject<Product[]>(this.products);
 
-  constructor() {}
+  constructor() {
+    const savedProducts = localStorage.getItem('products');
+    if (savedProducts) {
+      this.products = JSON.parse(savedProducts);
+      this.productsSubject.next(this.products);
+    }
+  }
 
   getProducts() {
-    console.log(this.products);
     return this.products;
   }
-
   addProduct(product: Product) {
     this.products.push(product);
+    this.saveToLocalStorage();
+  }
+  private saveToLocalStorage() {
+    localStorage.setItem('products', JSON.stringify(this.products));
     this.productsSubject.next(this.products);
   }
-
   getProductsObservable() {
     return this.productsSubject.asObservable();
   }
 
-  deleteProduct(product: Product) {
-    this.products.splice(1);
+  deleteProduct(index: number) {
+    this.products.splice(index, 1);
+    this.productsSubject.next([...this.products]);
   }
-  popTable( ){
-    this.products.pop;
+  popTable() {
+    this.products.pop();
+    this.productsSubject.next([...this.products]);
   }
 }
-
-// getProducts() {
-//   console.log(this.products);
-//   return this.products;
-// }
-
-// addProduct(product: Product) {
-//   this.products.push(product);
-//   this.productsSubject.next(this.products);
-// }
-
-// getProductsObservable() {
-//   return this.productsSubject.asObservable();
-// }

@@ -40,7 +40,7 @@ body {
   color: #FFF;
 }
 .card h1, .card h2, .card h3 {
-  color: #333;
+  color: #fffdfd;
 }
 .card h1 {
   text-align: center;
@@ -48,11 +48,12 @@ body {
 
 /* ---------- TITLE LOGIN ---------- */
 
-#title-login {
+#login-title {
   color: #fff; /* Cor do texto (branco) */
   font-weight: bold; /* Texto em negrito */
   font-family: "Arial", sans-serif; /* Escolha a fonte desejada */
   font-size: 24px; /* Tamanho da fonte (ajuste conforme necessário) */
+  text-align: center;
 }
 
 /* ---------- LOGIN FORM ---------- */
@@ -77,6 +78,12 @@ body {
 #login-title {
   color: white;
   align-items: center;
+}
+.warning {
+  margin-bottom: 10px;
+  text-align: center;
+  color: grey;
+  font-size: smaller;
 }
 
 /* ---------- BOTÃO RADIO ---------- */
@@ -140,9 +147,31 @@ button[type="submit"]:active {
 /* ---------- TABELA APPS ---------- */
 
 .tabela {
-  max-width: 600px; /* Largura máxima da tabela */
-  max-height: 600px; /* Altura máxima da tabela */
-  width: 100%; /* Garante que a tabela ocupe a largura máxima disponível */
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse; /* Mescla as bordas das células, garantindo uma aparência mais limpa */
+}
+
+.tabela th, .tabela td {
+  border: 1px solid #fff; /* Adiciona uma borda fina a todas as células */
+  padding: 8px; /* Adiciona algum espaço interno para melhorar a aparência */
+}
+
+.tabela th {
+  background-color: #afd1b0d4; /* Cor de fundo para os cabeçalhos da tabela */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabela tr {
+  background-color: #39673b; /* Cor de fundo alternada para melhor legibilidade */
+  color: #fff;
+  text-align: center;
+}
+
+.tabela tr:nth-child(even) {
+  background-color: #5d9254;
 }
 
 /* ---------- TABELA SELLER ---------- */
@@ -189,4 +218,17 @@ button[type="submit"]:active {
 #btn-product:active,
 #btn-show:active {
   background-color: #003c80; /* Altera a cor de fundo quando pressionado */
+}
+
+/* ---------- FORM SELLER ---------- */
+
+.formfield{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title-seller {
+  text-align: left;
+  color: black;
+  padding-bottom: 5px;
 }

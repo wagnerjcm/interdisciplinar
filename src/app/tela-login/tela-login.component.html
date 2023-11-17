@@ -1,8 +1,8 @@
 <div class="card-container">
   <div class="card">
     <div class="login">
-      <h1 id="login-title">Bem-vindo!</h1><br>
-      <h2>Login:</h2>
+      <h2 id="login-title">Bem-vindo!</h2><br>
+      <h3>Login:</h3>
       <form id="login-form">
         <div class="login-form">
           <div class="form-group">
@@ -23,6 +23,7 @@
               <label for="seller">Vendedor</label>
             </div><br>
           </div>
+          <div class="warning" *ngIf="!selectedOption">Por favor, escolha o tipo de usuário.</div>
           <div class="btn-submit">
             <button (click)="navegarParaTelaDestino()" type="submit">Entrar</button>
           </div>
