@@ -1,0 +1,33 @@
+<div class="card-container">
+  <div class="card">
+    <div class="login">
+      <h2 id="login-title">Bem-vindo!</h2><br>
+      <h3>Login:</h3>
+      <form id="login-form">
+        <div class="login-form">
+          <div class="form-group">
+              <label for="username">Usuário:</label>
+              <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+              <label for="password">Senha:</label>
+              <input type="password" id="password" name="password" required>
+          </div><br>
+        </div>
+          <div class="form-group">
+            <label>Escolha o tipo:</label>
+            <div class="radio-group">
+              <input type="radio" id="user" name="user-type" value="user" required (change)="updateSelectedOption($event)">
+              <label for="user">Usuário</label>
+              <input type="radio" id="seller" name="user-type" value="seller" required (change)="updateSelectedOption($event)">
+              <label for="seller">Vendedor</label>
+            </div><br>
+          </div>
+          <div class="warning" *ngIf="!selectedOption">Por favor, escolha o tipo de usuário.</div>
+          <div class="btn-submit">
+            <button (click)="navegarParaTelaDestino()" type="submit">Entrar</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

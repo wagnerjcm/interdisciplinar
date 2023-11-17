@@ -1,0 +1,27 @@
+<div class="card-container">
+  <div class="card">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Nome do Produto</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Deletar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>
+            <input type="checkbox" value="Delete" (change)="deleteProduct(i)">
+          </td>
+        </tr>
+      </tbody><br>
+    </table>
+    <div>
+      <app-btn-login></app-btn-login>
+    </div>
+  </div>
+</div>

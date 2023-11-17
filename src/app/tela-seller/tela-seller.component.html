@@ -1,0 +1,31 @@
+<div class="card-container">
+  <div class="card">
+    <div>
+      <h2 class="title-seller">Vamos vender?</h2>
+      <h3 class="title-seller">Cadastrar Produto</h3>
+        <div class="form-group">
+          <form (submit)="addProduct()" class="seller-form" ngModel #form="ngForm">
+            <div class="formfield">
+              <label for="name">Nome do Produto</label>
+              <input type="text" id="name" name="name" [(ngModel)]="name" required>
+            </div>
+            <div class="formfield">
+              <label for="price">Valor do Produto</label><br>
+              <input type="number" id="price" name="price" [(ngModel)]="price" required>
+            </div>
+            <div class="formfield">
+              <label for="quantity">Quantidade do Produto</label>
+              <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" required>
+            </div>
+            <div class="btn-form">
+              <div class="btn-seller">
+                <button id="btn-product" type="submit" value="Cadastrar">Cadastrar Produto</button><br>
+                <button id="btn-show" type="submit" (click)="toggleProductList()">Exibir Tabela</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <app-btn-login></app-btn-login>
+    </div>
+  </div>
+</div>
