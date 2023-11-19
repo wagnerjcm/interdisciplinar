@@ -1,16 +1,19 @@
 <div class="card-container">
   <div class="card">
-    <div>
+    <div class="user-market-products">
       <h2>Vamos economizar?</h2><br>
       <h3>Produtos Disponíveis</h3><br>
       <ul *ngIf="products.length > 0">
-        <li *ngFor="let product of products">
-          {{ product.name }} - {{ product.price }} - {{ product.quantity }}
-          <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
-        </li>
+        <div class="product-user">
+          <li *ngFor="let product of products">
+            {{ product.name }} - R$: {{ product.price }} - QTD: {{ product.quantity }}
+            <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+          </li>
+        </div>
       </ul>
+    </div>
       <p class="warning" *ngIf="products.length === 0">Nenhum produto cadastrado.</p>
-      <div *ngIf="cart.length > 0">
+      <div class="carrinho" *ngIf="cart.length > 0">
         <h2>Carrinho de Compras</h2>
         <ul>
           <li *ngFor="let item of cart">
@@ -18,9 +21,8 @@
             <button (click)="removeFromCart(item)">Remover do Carrinho</button>
           </li>
         </ul>
-        <button (click)="checkout()">Finalizar Compra</button>
+        <button class="finalizar-compra" (click)="checkout()">Finalizar Compra</button>
       </div><br>
       <app-btn-login></app-btn-login>
-    </div>
   </div>
 </div>

@@ -1,5 +1,4 @@
 
-
 /* ---------- COMPONENTS ---------- */
 
 * {
@@ -23,13 +22,12 @@ body {
 /* ---------- CARD CONTAINER ---------- */
 
 .card-container {
-  width: 300px;
-  height: 300px;
+  width: 500px;
   margin: 0 auto;
   margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  max-width: 100%;
 }
 .card {
   background-color: #39673b;
@@ -49,17 +47,17 @@ body {
 /* ---------- TITLE LOGIN ---------- */
 
 #login-title {
-  color: #fff; /* Cor do texto (branco) */
-  font-weight: bold; /* Texto em negrito */
-  font-family: "Arial", sans-serif; /* Escolha a fonte desejada */
-  font-size: 24px; /* Tamanho da fonte (ajuste conforme necessário) */
+  color: #fff;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
   text-align: center;
 }
 
 /* ---------- LOGIN FORM ---------- */
 
 .login-form {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
 }
 .login-form label {
@@ -90,7 +88,7 @@ body {
 
 .radio-group {
   margin-top: 10px;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 .radio-group label {
   margin-right: 30px;
@@ -102,46 +100,45 @@ body {
 /* ---------- BOTÃO SUBMIT ---------- */
 
 .btn-submit {
-  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  text-align: center;
 }
 button[type="submit"] {
-  background-color: #afd1b0d4; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto no botão */
-  padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
-  border: none; /* Remova a borda do botão */
-  border-radius: 5px; /* Borda arredondada */
-  cursor: pointer; /* Mude o cursor para uma mão ao passar o mouse */
+  background-color: #afd1b0d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
   font-size: large;
 }
 button[type="submit"]:hover {
-  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  background-color: #0056b3;
 }
 button[type="submit"]:active {
-  background-color: #003c80; /* Cor de fundo do botão quando pressionado */
+  background-color: #003c80;
 }
 
 /* ---------- BOTÃO APPS ---------- */
 
 .btn-form {
-  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  text-align: center;
 }
 button[type="submit"] {
-  background-color: #afd1b0d4; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto no botão */
-  padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
-  border: none; /* Remova a borda do botão */
-  border-radius: 5px; /* Borda arredondada */
-  cursor: pointer; /* Mude o cursor para uma mão ao passar o mouse */
+  background-color: #afd1b0d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: 400;
   font-size: small;
 }
-
 button[type="submit"]:hover {
-  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  background-color: #0056b3;
 }
 button[type="submit"]:active {
-  background-color: #003c80; /* Cor de fundo do botão quando pressionado */
+  background-color: #003c80;
 }
 
 /* ---------- TABELA APPS ---------- */
@@ -149,32 +146,30 @@ button[type="submit"]:active {
 .tabela {
   max-width: 100%;
   width: 100%;
-  border-collapse: collapse; /* Mescla as bordas das células, garantindo uma aparência mais limpa */
+  border-collapse: collapse;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
 }
-
 .tabela th, .tabela td {
-  border: 1px solid #fff; /* Adiciona uma borda fina a todas as células */
-  padding: 8px; /* Adiciona algum espaço interno para melhorar a aparência */
+  border: 1px solid #fff;
+  padding: 8px;
 }
-
 .tabela th {
-  background-color: #afd1b0d4; /* Cor de fundo para os cabeçalhos da tabela */
+  background-color: #afd1b0d4;
   color: #fff;
   font-weight: bold;
   text-align: center;
 }
-
 .tabela tr {
-  background-color: #39673b; /* Cor de fundo alternada para melhor legibilidade */
+  background-color: #39673b;
   color: #fff;
   text-align: center;
 }
-
 .tabela tr:nth-child(even) {
   background-color: #5d9254;
 }
 
-/* ---------- TABELA SELLER ---------- */
+/* ---------- TABELA SELLER PRODUCTS ---------- */
 
 .seller-form {
   width: 400px;
@@ -206,29 +201,107 @@ button[type="submit"]:active {
   cursor: pointer;
   font-weight: 200;
   font-size: 12px;
-  width: 45%; /* Define a largura igual para ambos os botões */
+  width: 45%;
   margin-left: 0;
   margin-bottom: 15px;
 }
 #btn-product:hover,
 #btn-show:hover {
-  background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+  background-color: #0056b3;
 }
-
 #btn-product:active,
 #btn-show:active {
-  background-color: #003c80; /* Altera a cor de fundo quando pressionado */
+  background-color: #003c80;
+}
+.seller-form {
+  width: 400px;
+  margin: 0 auto;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
-/* ---------- FORM SELLER ---------- */
+/* ---------- SELLER PRODUCT FORM ---------- */
 
 .formfield{
   text-align: center;
   margin-bottom: 10px;
 }
-
 .title-seller {
   text-align: left;
   color: black;
   padding-bottom: 5px;
+}
+
+/* ---------- FORM USER MARKET ---------- */
+
+.user-market-products {
+  overflow-y: auto;
+  max-height: 100%;
+}
+.product-user {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.product-user li {
+  list-style: none;
+  border: 1px solid #afd1b0d4;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-user button {
+  background-color: #003c80;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.product-user button:hover {
+  background-color: #0056b3;
+}
+.product-user button:active {
+  background-color: #003c80;
+}
+.carrinho {
+  margin-top: 20px;
+}
+.carrinho h2 {
+  color: #fff;
+}
+.carrinho li {
+  list-style: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #afd1b0d4;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrinho button {
+  background-color: #003c80;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.carrinho button:hover {
+  background-color: #0056b3;
+}
+.carrinho button:active {
+  background-color: #003c80;
+}
+.finalizar-compra {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
