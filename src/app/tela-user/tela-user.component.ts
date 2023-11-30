@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CartItem } from 'src/car-item/car-item.model';
 import { ProductService } from 'src/product.service';
 import { Product } from 'src/product/product.model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tela-user',
@@ -18,7 +20,7 @@ export class TelaUserComponent {
 
   @Output() addToCartEvent = new EventEmitter<Product>();
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private router: Router) {
     this.productService.getProductsObservable().subscribe((products) => {
       this.userProducts = products;
     });
@@ -39,8 +41,13 @@ export class TelaUserComponent {
   }
 
   removeFromCart(item: CartItem) {
+    const itemIndex = this.cart.indexOf(item);
+    if (itemIndex !== -1) {
+      this.cart.splice(itemIndex, 1);
+    }
   }
 
   checkout() {
+    this.router.navigate(['/payment']);
   }
 }
