@@ -9,6 +9,7 @@ import { TelaSellerComponent } from './tela-seller/tela-seller.component';
 import { TelaUserComponent } from './tela-user/tela-user.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { BtnLoginComponent } from './btn-login/btn-login.component';
+import { TelaPaymentComponent } from './tela-payment/tela-payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { BtnLoginComponent } from './btn-login/btn-login.component';
     TelaUserComponent,
     TelaSellerComponent,
     ProductListComponent,
-    BtnLoginComponent
+    BtnLoginComponent,
+    TelaPaymentComponent,
   ],
 
   imports: [
