@@ -1,8 +1,25 @@
 <div class="card-container">
   <div class="card">
-    <h1 id="title-login">OPÇÕES DE PAGAMENTO</h1><br>
-    <div class="btn-submit">
-      <button (click)="navegarParaTelaLogin()" type="submit">Continuar</button>
+    <h1 id="title-payment">PAGAMENTO COM CARTÃO</h1><br>
+    <div class="form-group payment-form">
+      <div class="formfield">
+        <label for="numeroCartao">Número do Cartão:</label>
+        <input type="text" id="numeroCartao" [(ngModel)]="numeroCartao" placeholder="1234 5678 9012 3456">
+      </div>
+      <div class="formfield">
+        <label for="nomeCartao">Nome no Cartão:</label>
+        <input type="text" id="nomeCartao" [(ngModel)]="nomeCartao" placeholder="Nome do Titular">
+      </div>
+      <div class="formfield">
+        <label for="codigoSeguranca">Código de Segurança:</label>
+        <input type="text" id="codigoSeguranca" [(ngModel)]="codigoSeguranca" placeholder="CVV">
+      </div>
+      <div class="btn-submit">
+        <button (click)="processarPagamento()" type="submit">Continuar</button>
+      </div>
+      <div *ngIf="loading" class="loading-spinner">
+      <br><p>Processando pagamento...</p>
+      </div>
     </div>
   </div>
 </div>
