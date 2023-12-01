@@ -8,9 +8,18 @@ import { Router } from '@angular/router';
 })
 
 export class TelaPaymentComponent {
+  numeroCartao: string = '';
+  nomeCartao: string = '';
+  codigoSeguranca: string = '';
+  loading: boolean = false;
+
   constructor(private router: Router) {}
 
-  navegarParaTelaLogin() {
-    this.router.navigate(['/login']);
+  processarPagamento() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.router.navigate(['/confirmed']);
+    }, 3000);
   }
 }

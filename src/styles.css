@@ -219,6 +219,11 @@ button[type="submit"]:active {
   max-height: calc(100vh - 100px);
   overflow-y: auto;
 }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* ---------- SELLER PRODUCT FORM ---------- */
 
@@ -304,4 +309,135 @@ button[type="submit"]:active {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+/* ---------- CAMPOS DE PAGAMENTO ---------- */
+
+.payment-form {
+  width: 400px;
+  margin: 0 auto;
+}
+.payment-form .formfield {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.payment-form label {
+  width: 80px;
+  text-align: center;
+  margin-right: 10px;
+}
+.payment-form input {
+  flex: 1;
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.payment-form button[type="submit"] {
+  background-color: #afd1b0d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 12px;
+  width: 100%;
+}
+.payment-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.payment-form button[type="submit"]:active {
+  background-color: #003c80;
+}
+
+/* ---------- CONFIRMED CONTAINER ---------- */
+
+.confirmed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- LOGO CONTAINER ---------- */
+
+.logo-container {
+  margin-bottom: 20px;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* ---------- CONFIRMATION CONTENT ---------- */
+
+.confirmation-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.confirmation-content h1 {
+  color: #0056b3;
+}
+.payment-image img {
+  max-width: 30%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.confirmation-content p {
+  margin-top: 20px;
+}
+
+/* ---------- BOTÃO REDIRECIONAR ---------- */
+
+button {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: #003c80;
+}
+button:active {
+  background-color: #002650;
+}
+
+/* ---------- BOTÃO TABLE VENDER ---------- */
+
+.btn-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.btn-table button {
+  flex: 1;
+  background-color: #afd1b0d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 5px;
+}
+.btn-table button:hover {
+  background-color: #0056b3;
+}
+.btn-table button:active {
+  background-color: #003c80;
 }

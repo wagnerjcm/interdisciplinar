@@ -6,6 +6,7 @@ import { TelaSellerComponent } from './tela-seller/tela-seller.component';
 import { TelaUserComponent } from './tela-user/tela-user.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TelaPaymentComponent } from './tela-payment/tela-payment.component';
+import { TelaConfirmedComponent } from './tela-confirmed/tela-confirmed.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'payment', component: TelaPaymentComponent
+  },
+  {
+    path: 'confirmed', component: TelaConfirmedComponent
   }
 ];
 
